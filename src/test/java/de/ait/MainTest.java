@@ -9,8 +9,14 @@ public class MainTest {
     @Test
     void testGetGreetingReturnsCorrectMessage() {
         Main main = new Main();
-        String greeting = main.getGreeting("Test");
-        assertEquals("Hello, Test!", greeting);
+        String greeting = main.getGreeting(" Test!");
+        assertEquals("Hello Test!", greeting);
+    }
+
+    void testGetGreetingReturnsNotCorrectMessage() {
+        Main main = new Main();
+        String greeting = main.getGreeting(" Test2");
+        assertEquals("Hello Test2", greeting);
     }
 
 }
